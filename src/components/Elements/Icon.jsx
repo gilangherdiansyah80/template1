@@ -1,7 +1,7 @@
 // eslint-disable-next-line react/prop-types
-const Icon = ({ icon, handleOpen, color, size, children }) => {
+const Icon = ({ style, handleIcon }) => {
     return (
-        <i className={`${icon} ${size} ${color} cursor-pointer`} onClick={handleOpen}>{children}</i>
+        <i className={`${style}`} onClick={handleIcon}></i>
     )
 }
 

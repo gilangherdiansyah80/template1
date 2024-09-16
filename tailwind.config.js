@@ -11,6 +11,11 @@ export default {
       },
       fontFamily: {
         'briem': 'Briem Hand'
+      },
+      colors: {
+        'red': '#B8001F',
+        'gray1': '#507687',
+        'gray2': '#384B70',
       }
     },
   },

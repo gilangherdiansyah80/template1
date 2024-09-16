@@ -44,6 +44,7 @@ const Hero = () => {
     <Fragment>
       <section id='home' className='flex flex-col items-center p-3 gap-y-5' style={heroStyle}>
         <h2 data-aos="fade-left" data-aos-duration="1000" className="text-3xl font-bold text-center font-briem md:text-7xl">Food and Snack</h2>
+        <hr className='w-52 border-red border-2 rounded-lg' />
         <p data-aos='fade-right' data-aos-duration="1000" className='md:text-xl'>Puaskan rasa lapar anda dengan Dapoer Ghaitsa Catering</p>
         <a data-aos='fade-up' data-aos-duration="1000" href="#menu" onClick={(e) => scrollAction('menu', e)}><Button><span className='text-2xl'>Lihat Menu</span></Button></a>
       </section>

@@ -4,114 +4,120 @@ import { useState } from 'react';
 import Icon from '../Elements/Icon';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { Link } from 'react-router-dom';
+
 const AuthLayout = ({ children }) => {
     AOS.init();
 
     const [open, setShowOpen] = useState(false);
 
-    const handleOpen = () => {
+    const handleToggle = () => {
         setShowOpen(!open);
     }
 
-    const scrollMenu = (id) => {
-        const element = document.getElementById(id);
-        if (element) {
-            element.scrollIntoView({ behavior: 'smooth' });
-        }
-    }
-
-    const handleClick = (id, e) => {
-        e.preventDefault();
-        scrollMenu(id);
-    };
-
     return (
         <div className=''>
-            <header data-aos="fade-down" className="fixed z-20 w-screen bg-slate-900 xl:flex lg:justify-around justify-between lg:px-10 items-center overflow-x-hidden">
-                <div className="flex justify-between items-center p-3">
-                    <a href='#home' onClick={(e) => handleClick('home', e)} className='flex items-center gap-x-3'>
-                        <img src="images/logo-catering.png" alt="Dapoer Ghaitsa Catering" className="w-14" />
-                        <h1 className='hidden md:block text-white text-3xl font-bold font-briem'>Dapoer Ghaitsa Catering</h1>
-                    </a>
-                    <div className='mr-6 xl:hidden'>
+            <header className="bg-[#384B70] top-0 left-0 w-full lg:flex lg:justify-center font-inter fixed z-10 h-24 md:h-20" data-aos="fade-down">
+                <div className="w-full lg:w-1/2 h-full flex justify-center lg:justify-between items-center">
+                <div className='w-full flex justify-between lg:justify-start items-center'>
+                    <img src="/images/logo.png" alt="CodeExpress" className="w-44 -ms-5" />
+                    <div className='mr-3 lg:hidden'>
                         {open ? (
-                        <Icon icon='fas fa-times' size='text-3xl' color='text-white' handleOpen={handleOpen} />
+                            <Icon style="fas fa-times text-3xl md:text-4xl text-white mr-2 cursor-pointer text-red" handleIcon={handleToggle}></Icon>
                         ) : (
-                        <Icon icon='fas fa-bars' size='text-3xl' color='text-white' handleOpen={handleOpen} />
+                            <Icon style="fas fa-bars text-3xl md:text-4xl text-white mr-2 cursor-pointer text-red" handleIcon={handleToggle}></Icon>
                         )}
                     </div>
                 </div>
                 {open && (
-                    <nav className="bg-white p-3">
-                    <ul className="text-black flex flex-col gap-y-3">
-                        <h1 className="text-2xl font-bold md:hidden">Dapoer Ghaitsa Catering</h1>
-                        <a href='#home' onClick={(e) => handleClick('home', e)}><li className="hover:text-yellow-700 md:text-xl" onClick={handleOpen}>Home</li></a>
-                        <a href='#about' onClick={(e) => handleClick('about', e)}><li className="hover:text-yellow-700 md:text-xl" onClick={handleOpen}>About Us</li></a>
-                        <a href='#menu' onClick={(e) => handleClick('menu', e)}><li className="hover:text-yellow-700 md:text-xl" onClick={handleOpen}>Menu</li></a>
-                        <a href='#contact' onClick={(e) => handleClick('contact', e)}><li className="hover:text-yellow-700 md:text-xl" onClick={handleOpen}>Contact Us</li></a>
-                    </ul>
+                    <nav className="bg-[#507687] w-full mt-80 md:mt-52 absolute lg:hidden">
+                        <ul className='text-white flex flex-col font-bold md:text-xl'>
+                            <Link to='/'>
+                                <li className={`hover:bg-slate-700 w-full p-2 md:p-4 px-4 ${location.pathname === '/' ? 'bg-slate-500' : 'hover:bg-slate-700'}`}>Home</li>
+                            </Link>
+                            <Link to='/menu'>
+                                <li className={`hover:bg-slate-700 w-full p-2 md:p-4 px-4 ${location.pathname === '/menu' ? 'bg-slate-500' : 'hover:bg-gray'}`}>About Us</li>
+                            </Link>
+                            <Link to='/menu'>
+                                <li className={`hover:bg-slate-700 w-full p-2 md:p-4 px-4 ${location.pathname === '/menu' ? 'bg-slate-500' : 'hover:bg-gray'}`}>Product List</li>
+                            </Link>
+                            <Link to='/menu'>
+                                <li className={`hover:bg-slate-700 w-full p-2 md:p-4 px-4 ${location.pathname === '/menu' ? 'bg-slate-500' : 'hover:bg-gray'}`}>Newa</li>
+                            </Link>
+                            <Link to='/menu'>
+                                <li className={`hover:bg-slate-700 w-full p-2 md:p-4 px-4 ${location.pathname === '/menu' ? 'bg-slate-500' : 'hover:bg-gray'}`}>Contact Us</li>
+                            </Link>
+                        </ul>
                     </nav>
                 )}
-                <nav className="hidden xl:block xl:px-3">
-                    <ul className="text-black flex flex-col gap-y-3 xl:flex-row xl:text-white xl:gap-x-14">
-                        <h1 className="text-2xl font-bold md:hidden">Dapoer Ghaitsa Catering</h1>
-                        <a href='#home' onClick={(e) => handleClick('home', e)}><li className="hover:text-yellow-700 text-3xl">Home</li></a>
-                        <a href='#about' onClick={(e) => handleClick('about', e)}><li className="hover:text-yellow-700 text-3xl">About Us</li></a>
-                        <a href='#menu' onClick={(e) => handleClick('menu', e)}><li className="hover:text-yellow-700 text-3xl">Menu</li></a>
-                        <a href='#contact' onClick={(e) => handleClick('contact', e)}><li className="hover:text-yellow-700 text-3xl">Contact Us</li></a>
-                    </ul>
-                </nav>
-        </header>
 
-        <main className='bg-yellow-700 flex flex-col overflow-x-hidden'>
-                    {children}
+                    <nav className="hidden w-full lg:block">
+                        <ul className='text-white flex justify-end gap-x-10 font-bold'>
+                            <Link to='/'>
+                                <li className={`w-full p-2 md:p-4 px-4 text-xl ${location.pathname === '/' ? 'text-gray' : 'hover:text-gray'}`}>Home</li>
+                            </Link>
+                            <Link to='/menu'>
+                                <li className={`w-full p-2 md:p-4 px-4 text-xl ${location.pathname === '/menu' ? 'text-gray' : 'hover:text-gray'}`}>Menu</li>
+                            </Link>
+                        </ul>
+                    </nav>
+                </div>
+            </header>
 
-                    <div className='fixed bottom-5 right-5 bg-green-500 rounded-full w-14 h-14 flex justify-center items-center md:w-16 md:h-16'>
-                        <a href="https://wa.me/+6281222535507">
-                            <Icon icon='fab fa-whatsapp' color='text-white' size='text-3xl md:text-4xl' />
-                        </a>
+            <main className='bg-[#ECDFCC] flex flex-col overflow-x-hidden'>
+                {children}
+
+                <div className='fixed bottom-5 right-5 bg-green-500 rounded-full w-10 h-10 flex justify-center items-center md:w-16 md:h-16'>
+                    <a href="https://wa.me/+6281222535507">
+                        <Icon style="fab fa-whatsapp text-white text-2xl" />
+                    </a>
+                </div>
+            </main>
+
+            <footer className="bg-[#384B70] text-white p-3 flex flex-col gap-y-5">
+                <div>
+                    <img src="/images/logotext.png" alt="CodeExpress" className="w-52 -mt-20 -ms-10" />
+                    <p className="-mt-20">Mari wujudkan impian kalian bersama CodeExpress</p>
+                </div>
+
+                <hr />
+
+                <div className="flex flex-col gap-y-3">
+                    <div className="flex flex-col gap-y-1">
+                        <h1 className="text-xl font-semibold">Menu Kami</h1>
+                        <hr className="w-20 rounded-xl bg-purple-800 border-purple-800 border-y-2" />
                     </div>
-        </main>
+                    <ul className="flex flex-col gap-y-2">
+                        <li className="hover:text-purple-800">Home</li>
+                        <li className="hover:text-purple-800">Help</li>
+                    </ul>
+                </div>
 
-        <footer className='bg-slate-900 flex flex-col'>
-                    <section className='p-3 text-white md:p-5 lg:flex lg:justify-center lg:items-center'>
-                        <div className='flex flex-col gap-y-3 my-5 lg:w-1/2'>
-                            <h1 className='text-xl font-bold md:text-4xl font-briem'>Dapoer Ghaitsa Catering</h1>
-                            <p className='text-base text-gray-300 md:text-lg'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Praesentium delectus porro dolore omnis odio nostrum quas? Aut eveniet vitae voluptates!</p>
-                        </div>
-                        <div className='flex gap-y-5 flex-col lg:flex-row lg:w-1/3 lg:justify-around'>
-                            <div className='flex flex-col'>
-                                <h2 className='font-semibold md:text-lg'>Explore Our Page</h2>
-                                <ul className='text-gray-300 text-sm'>
-                                    <li className="hover:text-yellow-700 md:text-base">
-                                        <a href='#home' onClick={(e) => handleClick('home', e)}>Home</a>
-                                    </li>
-                                    <li className="hover:text-yellow-700 md:text-base">
-                                        <a href='#about' onClick={(e) => handleClick('about', e)}>About Us</a>
-                                    </li>
-                                    <li className="hover:text-yellow-700 md:text-base">
-                                        <a href='#menu' onClick={(e) => handleClick('menu', e)}>Menu</a>
-                                    </li>
-                                    <li className="hover:text-yellow-700 md:text-base">
-                                        <a href='#contact' onClick={(e) => handleClick('contact', e)}>Contact Us</a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div className='flex flex-col'>
-                                <h3 className='font-semibold md:text-lg'>Social Media</h3>
-                                <div className='text-sm text-gray-300'>
-                                    <a href='https://www.instagram.com/dapoer_ghaitsa?igsh=NDZ4MXpoMDMxcGhk' className='flex items-center gap-x-2 hover:text-yellow-700 md:text-base'>
-                                        <Icon icon='fab fa-instagram' />
-                                        <span>Instagram</span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                    <section className='bg-yellow-700 p-3'>
-                        <p className="text-white text-center md:text-xl">Copyright © 2024 Dapoer Ghaitsa Catering</p>
-                    </section>
-                </footer>
+                <hr />
+
+                <div className="flex flex-col gap-y-3">
+                    <div className="flex flex-col gap-y-1">
+                        <h1 className="text-xl font-semibold">Hubungi Kami</h1>
+                        <hr className="w-20 rounded-xl bg-purple-800 border-purple-800 border-y-2" />
+                    </div>
+                    <ul className="flex flex-col gap-y-3">
+                        <li className="flex gap-x-3 items-center">
+                        <img src="/images/email.png" alt="Email" className="w-6" />
+                        <p>codeexpress@gmai.com</p>
+                        </li>
+                        <li className="flex gap-x-3 items-center">
+                        <i className="fab fa-whatsapp text-2xl text-green-600 hover:text-purple-800"></i>
+                        <p>+62 858 66244363</p>
+                        </li>
+                    </ul>
+                </div>
+
+                <hr />
+
+                <div className="text-center flex justify-center items-start">
+                    <p className="text-sm">© Copyright 2024. All Rights Reserved by CodeExpress</p>
+                </div>
+            </footer>
         </div>
     )
 }
