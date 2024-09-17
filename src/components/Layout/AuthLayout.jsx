@@ -23,9 +23,9 @@ const AuthLayout = ({ children }) => {
                     <img src="/images/logo.png" alt="CodeExpress" className="w-44 -ms-5" />
                     <div className='mr-3 lg:hidden'>
                         {open ? (
-                            <Icon style="fas fa-times text-3xl md:text-4xl text-white mr-2 cursor-pointer text-red" handleIcon={handleToggle}></Icon>
+                            <Icon style="fas fa-times text-3xl md:text-4xl mr-2 cursor-pointer text-red" handleIcon={handleToggle}></Icon>
                         ) : (
-                            <Icon style="fas fa-bars text-3xl md:text-4xl text-white mr-2 cursor-pointer text-red" handleIcon={handleToggle}></Icon>
+                            <Icon style="fas fa-bars text-3xl md:text-4xl mr-2 cursor-pointer text-red" handleIcon={handleToggle}></Icon>
                         )}
                     </div>
                 </div>
@@ -85,11 +85,11 @@ const AuthLayout = ({ children }) => {
                 <div className="flex flex-col gap-y-3">
                     <div className="flex flex-col gap-y-1">
                         <h1 className="text-xl font-semibold">Menu Kami</h1>
-                        <hr className="w-20 rounded-xl bg-purple-800 border-purple-800 border-y-2" />
+                        <hr className="w-20 rounded-xl border-red border-y-2" />
                     </div>
                     <ul className="flex flex-col gap-y-2">
-                        <li className="hover:text-purple-800">Home</li>
-                        <li className="hover:text-purple-800">Help</li>
+                        <li className="hover:text-red">Home</li>
+                        <li className="hover:text-red">Help</li>
                     </ul>
                 </div>
 
@@ -98,7 +98,7 @@ const AuthLayout = ({ children }) => {
                 <div className="flex flex-col gap-y-3">
                     <div className="flex flex-col gap-y-1">
                         <h1 className="text-xl font-semibold">Hubungi Kami</h1>
-                        <hr className="w-20 rounded-xl bg-purple-800 border-purple-800 border-y-2" />
+                        <hr className="w-20 rounded-xl border-red border-y-2" />
                     </div>
                     <ul className="flex flex-col gap-y-3">
                         <li className="flex gap-x-3 items-center">
@@ -106,7 +106,7 @@ const AuthLayout = ({ children }) => {
                         <p>codeexpress@gmai.com</p>
                         </li>
                         <li className="flex gap-x-3 items-center">
-                        <i className="fab fa-whatsapp text-2xl text-green-600 hover:text-purple-800"></i>
+                        <i className="fab fa-whatsapp text-2xl text-green-600 hover:text-red"></i>
                         <p>+62 858 66244363</p>
                         </li>
                     </ul>
