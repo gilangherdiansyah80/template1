@@ -35,7 +35,7 @@ const AuthLayout = ({ children }) => {
                             <Link to='/'>
                                 <li className={`hover:bg-slate-700 w-full p-2 md:p-4 px-4 ${location.pathname === '/' ? 'bg-slate-500' : 'hover:bg-slate-700'}`}>Home</li>
                             </Link>
-                            <Link to='/menu'>
+                            <Link to='/about'>
                                 <li className={`hover:bg-slate-700 w-full p-2 md:p-4 px-4 ${location.pathname === '/menu' ? 'bg-slate-500' : 'hover:bg-gray'}`}>About Us</li>
                             </Link>
                             <Link to='/menu'>

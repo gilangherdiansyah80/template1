@@ -48,7 +48,7 @@ const Home = () => {
               </div>
             </section>
 
-            <section className='p-5 flex flex-col gap-y-5'>
+            <section className='p-3 flex flex-col gap-y-5 mt-7'>
               <article className='flex flex-col justify-center gap-y-2'>
                 <h1 className='font-bold text-xl'>About Us</h1>
                 <hr className='border-red w-24 border-2 rounded-xl' />
@@ -70,6 +70,64 @@ const Home = () => {
                 <span>Learn More</span>
                 <i className='fas fa-arrow-right'></i>
               </button>
+            </section>
+
+            <section className='bg-gray1 p-3 flex flex-col gap-y-5 text-white mt-7'>
+              <article className='flex flex-col justify-center gap-y-2'>
+                <h1 className='font-bold text-xl'>Testimoni</h1>
+                <hr className='border-red w-24 border-2 rounded-xl' />
+              </article>
+
+              <article>
+                <h2 className='w-92 text-2xl font-semibold'>Juicy and Tender Steak with Passion</h2>
+              </article>
+
+              <article>
+                <p>Bekerja sama dengan pemasok daging sapi berkualitas tinggi telah semakin memperkuat komitmen kami terhadap keunggulan kuliner. Transparansi dan ketertelusuran rantai pasokan memberi kami keyakinan bahwa setiap steak yang kami sajikan tidak hanya lezat, tetapi juga dihasilkan secara etis dan berkelanjutan.</p>
+              </article>
+
+              <div className='bg-[#ECDFCC] rounded-md text-black p-3 text-center flex flex-col gap-y-3'>
+                <img src="/images/testimoni1.jpg" alt="Testimoni" className='w-full' />
+                <h3 className='text-red font-semibold'>David M.</h3>
+                <p>&quot;Sebagai koki di sebuah restoran terkenal, saya harus memastikan setiap steak yang disajikan memenuhi standar tertinggi. SteakHouse Delight tidak pernah mengecewakan. Kualitas daging dan metode memasaknya benar-benar sempurna.&quot;</p>
+              </div>
+
+              <div className='bg-[#ECDFCC] rounded-md text-black p-3 text-center flex flex-col gap-y-3 mb-5'>
+                <img src="/images/testimoni2.jpg" alt="Testimoni" className='w-full' />
+                <h3 className='text-red font-semibold'>Lisa P.</h3>
+                <p>&quot;Sebagai CEO dari Gourmet Bites, produsen makanan berkualitas, bekerja sama dengan SteakHouse Delight menunjukkan komitmen kami terhadap kualitas dan kelezatan. Kami senang bekerja dengan pemasok steak yang bertanggung jawab dan selalu memberikan produk terbaik.&quot;</p>
+              </div>
+            </section>
+
+            <section className='p-3 flex flex-col gap-y-5 mt-7 mb-7'>
+              <article className='flex flex-col justify-center items-center gap-y-2'>
+                <h1 className='font-bold text-xl'>News Update</h1>
+                <hr className='border-red w-32 border-2 rounded-xl' />
+              </article>
+
+              <article>
+                <p className='text-center'>Kolaborasi kami dengan pemasok daging sapi berkualitas tinggi memperkuat komitmen kami terhadap keberlanjutan dan keunggulan dalam setiap hidangan. Transparansi dalam rantai pasokan kami memberikan kepercayaan bahwa steak yang kami sajikan tidak hanya lezat, tetapi juga diproduksi secara etis.</p>
+              </article>
+
+              <div className='bg-[#ECDFCC] rounded-md text-black flex flex-col gap-y-3 drop-shadow-lg'>
+                <img src="/images/news1.jpg" alt="News Update" className='w-full h-52 rounded-t-md' />
+                <h3 className='text-red font-semibold p-3'>From Farm to Table: The Journey of Our Premium Steaks</h3>
+              </div>
+
+              <div className='bg-[#ECDFCC] rounded-md text-black flex flex-col gap-y-3 drop-shadow-lg'>
+                <img src="/images/nes2.jpg" alt="News Update" className='w-full h-52 rounded-t-md' />
+                <h3 className='text-red font-semibold p-3'>The Art of Cooking the Perfect Steak</h3>
+              </div>
+
+              <div className='bg-[#ECDFCC] rounded-md text-black flex flex-col gap-y-3 drop-shadow-lg'>
+                <img src="/images/news3.jpg" alt="News Update" className='w-full h-52 rounded-t-md' />
+                <h3 className='text-red font-semibold p-3'>Steak in Your Kitchen: How to Choose and Cook It Like a Pro</h3>
+              </div>
+
+              <div className='bg-[#ECDFCC] rounded-md text-black flex flex-col gap-y-3 drop-shadow-lg'>
+                <img src="/images/news4.jpg" alt="News Update" className='w-full h-52 rounded-t-md' />
+                <h3 className='text-red font-semibold p-3'>Sustainable Sourcing: Ensuring the Best Steak for You and the Planet</h3>
+              </div>
             </section>
       </AuthLayout>
   )

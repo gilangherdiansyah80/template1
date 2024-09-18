@@ -28,7 +28,7 @@ const Hero = () => {
 
   return (
     <Fragment>
-      <section id='home' className='flex flex-col p-3 gap-y-3 justify-center text-white mt-20' style={heroStyle}>
+      <section id='home' className='flex flex-col p-3 gap-y-3 justify-center text-white mt-24' style={heroStyle}>
         <h1 data-aos="fade-left" data-aos-duration="1000" className="text-2xl font-bold font-briem md:text-7xl">SteakHouse Delightk</h1>
         <hr className='w-52 border-red border-2 rounded-lg' />
         <h2 className='text-3xl font-bold w-2/3'>Surga Steak Pilihan Anda!</h2>
@@ -38,8 +38,6 @@ const Hero = () => {
           <i className='fas fa-arrow-right'></i>
         </button>
       </section>
-
-      <div id='about'></div>
     </Fragment>
     
   );
