@@ -36,10 +36,10 @@ const AuthLayout = ({ children }) => {
                                 <li className={`hover:bg-slate-700 w-full p-2 md:p-4 px-4 ${location.pathname === '/' ? 'bg-slate-500' : 'hover:bg-slate-700'}`}>Home</li>
                             </Link>
                             <Link to='/about'>
-                                <li className={`hover:bg-slate-700 w-full p-2 md:p-4 px-4 ${location.pathname === '/menu' ? 'bg-slate-500' : 'hover:bg-gray'}`}>About Us</li>
+                                <li className={`hover:bg-slate-700 w-full p-2 md:p-4 px-4 ${location.pathname === '/about' ? 'bg-slate-500' : 'hover:bg-gray'}`}>About Us</li>
                             </Link>
-                            <Link to='/menu'>
-                                <li className={`hover:bg-slate-700 w-full p-2 md:p-4 px-4 ${location.pathname === '/menu' ? 'bg-slate-500' : 'hover:bg-gray'}`}>Product List</li>
+                            <Link to='/product'>
+                                <li className={`hover:bg-slate-700 w-full p-2 md:p-4 px-4 ${location.pathname === '/product' ? 'bg-slate-500' : 'hover:bg-gray'}`}>Product List</li>
                             </Link>
                             <Link to='/menu'>
                                 <li className={`hover:bg-slate-700 w-full p-2 md:p-4 px-4 ${location.pathname === '/menu' ? 'bg-slate-500' : 'hover:bg-gray'}`}>Newa</li>
@@ -89,7 +89,9 @@ const AuthLayout = ({ children }) => {
                     </div>
                     <ul className="flex flex-col gap-y-2">
                         <li className="hover:text-red">Home</li>
-                        <li className="hover:text-red">Help</li>
+                        <li className="hover:text-red">About Us</li>
+                        <li className="hover:text-red">Product List</li>
+                        <li className="hover:text-red">Contact Us</li>
                     </ul>
                 </div>
 
