@@ -6,52 +6,55 @@ const About = () => {
     backgroundImage: `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/images/about1.jpg')`,
     backgroundSize: 'cover',
     backgroundPosition: 'center',
-    height: '50vh',
     textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)',
   };
 
   return (
       <AuthLayout>
-        <section id='about' className='flex flex-col p-3 gap-y-5 justify-center text-white mt-24' style={heroStyle}>
-            <h1 data-aos="fade-left" data-aos-duration="1000" className="text-2xl font-bold font-briem md:text-7xl text-center">About Us</h1>
-            <p data-aos='fade-right' data-aos-duration="1000" className='md:text-xl text-center'>Meskipun industri kuliner terus berkembang, kami di SteakHouse Delight selalu berpegang teguh pada prinsip kualitas dan keunggulan. Kami percaya bahwa sajian steak terbaik berasal dari daging berkualitas yang diproses dengan teknik masak sempurna.</p>
+        <section id='about' className='flex flex-col p-3 gap-y-5 justify-center text-white mt-24 md:mt-20 h-[50vh] md:h-[30vh] lg:h-[50vh]' style={heroStyle}>
+            <h1 data-aos="fade-left" data-aos-duration="1000" className="text-2xl font-bold font-briem md:text-4xl lg:text-5xl text-center lg:w-3/5 lg:self-center">About Us</h1>
+            <p data-aos='fade-right' data-aos-duration="1000" className='md:text-xl text-center lg:w-1/3 lg:self-center'>Meskipun industri kuliner terus berkembang, kami di SteakHouse Delight selalu berpegang teguh pada prinsip kualitas dan keunggulan. Kami percaya bahwa sajian steak terbaik berasal dari daging berkualitas yang diproses dengan teknik masak sempurna.</p>
         </section>
 
-        <section className="flex flex-col gap-y-5 p-5 mt-7">
-            <img src="/images/about4.jpg" alt="SteakHouse Delight" />
-            <img src="/images/about3.jpg" alt="SteakHouse Delight" />
-        </section>
+        <section className="p-5 flex flex-col md:flex-row lg:flex-col w-full md:gap-x-10 lg:w-3/5 lg:h-fit lg:self-center"> 
+            <section className="flex flex-col gap-y-5 mt-7 md:w-1/2 lg:flex-row lg:gap-x-5 lg:w-full">
+                <img src="/images/about4.jpg" alt="SteakHouse Delight" className="lg:w-full lg:h-96" />
+                <img src="/images/about3.jpg" alt="SteakHouse Delight" className="lg:w-full lg:h-96" />
+            </section>
 
-        <section className='p-5 flex flex-col gap-y-5 mt-7'>
-            <article className='flex flex-col justify-center gap-y-2'>
-                <h1 className='font-bold text-xl'>About Us</h1>
-                <hr className='border-red w-24 border-2 rounded-xl' />
-            </article>
-
-            <article>
-                <h2 className='w-92 text-2xl font-semibold'>Our Story</h2>
-            </article>
-
-            <article>
-                <p>Demi menjaga standar tinggi dalam setiap sajian, kami bekerja sama dengan peternakan yang menerapkan praktik peternakan berkelanjutan. Kami memastikan bahwa setiap steak yang sampai ke meja Anda tidak hanya lezat, tetapi juga diproduksi secara etis dan bertanggung jawab terhadap lingkungan.</p>
-            </article>
-
-            <article>
-                <p>Melalui rantai pasokan yang transparan dan terjamin, kami berkomitmen untuk menjaga kualitas daging terbaik dan metode memasak yang presisi, sehingga setiap steak yang disajikan tetap segar, juicy, dan penuh rasa.</p>
-            </article>
-
-            <div className="flex flex-col gap-y-3">
-                <img src="/images/founder.jpg" alt="Founder" />
-                <article className="flex flex-col gap-y-1">
-                    <h3 className="font-bold text-xl">Aditya Sofyan</h3>
-                    <hr className="border-red w-32 border-2 rounded-xl" />
-                    <h4>Ceo of SteakHouse Delight</h4>
+            <section className='flex flex-col gap-y-5 mt-7 md:w-1/2 lg:w-full'>
+                <article className='flex flex-col justify-center gap-y-2'>
+                    <h1 className='font-bold text-xl'>About Us</h1>
+                    <hr className='border-red w-24 border-2 rounded-xl' />
                 </article>
 
                 <article>
-                    <p>Menciptakan rantai pasokan yang transparan dan terjamin untuk memastikan bahwa setiap steak yang kami sajikan tidak hanya enak, tetapi juga diproduksi secara bertanggung jawab</p>
+                    <h2 className='w-92 text-2xl font-semibold md:text-4xl'>Our Story</h2>
                 </article>
-            </div>
+
+                <article>
+                    <p className="md:text-xl">Demi menjaga standar tinggi dalam setiap sajian, kami bekerja sama dengan peternakan yang menerapkan praktik peternakan berkelanjutan. Kami memastikan bahwa setiap steak yang sampai ke meja Anda tidak hanya lezat, tetapi juga diproduksi secara etis dan bertanggung jawab terhadap lingkungan.</p>
+                </article>
+
+                <article>
+                    <p className="md:text-xl">Melalui rantai pasokan yang transparan dan terjamin, kami berkomitmen untuk menjaga kualitas daging terbaik dan metode memasak yang presisi, sehingga setiap steak yang disajikan tetap segar, juicy, dan penuh rasa.</p>
+                </article>
+
+                <div className="flex flex-col gap-y-3 w-full lg:flex-row lg:gap-x-5">
+                    <img src="/images/founder.jpg" alt="Founder" className="rounded-lg" />
+                    <div className="flex flex-col gap-y-3">
+                        <article className="flex flex-col gap-y-1">
+                            <h3 className="font-bold text-xl md:text-2xl">Aditya Sofyan</h3>
+                            <hr className="border-red w-32 md:w-40 border-2 rounded-xl" />
+                            <h4 className="text-xl">Ceo of SteakHouse Delight</h4>
+                        </article>
+
+                        <article>
+                            <p className="md:text-xl">Menciptakan rantai pasokan yang transparan dan terjamin untuk memastikan bahwa setiap steak yang kami sajikan tidak hanya enak, tetapi juga diproduksi secara bertanggung jawab</p>
+                        </article>
+                    </div>
+                </div>
+            </section>
         </section>
       </AuthLayout>
   );

@@ -16,9 +16,9 @@ const AuthLayout = ({ children }) => {
     }
 
     return (
-        <div className=''>
+        <div className='w-full'>
             <header className="bg-[#384B70] top-0 left-0 w-full lg:flex lg:justify-center font-inter fixed z-10 h-24 md:h-20" data-aos="fade-down">
-                <div className="w-full lg:w-1/2 h-full flex justify-center lg:justify-between items-center">
+                <div className="w-full lg:w-3/5 h-full flex justify-center lg:justify-between items-center">
                 <div className='w-full flex justify-between lg:justify-start items-center'>
                     <img src="/images/logo.png" alt="CodeExpress" className="w-44 -ms-5" />
                     <div className='mr-3 lg:hidden'>
@@ -30,7 +30,7 @@ const AuthLayout = ({ children }) => {
                     </div>
                 </div>
                 {open && (
-                    <nav className="bg-[#507687] w-full mt-80 md:mt-52 absolute lg:hidden">
+                    <nav className="bg-[#507687] w-full mt-80 md:mt-96 absolute lg:hidden">
                         <ul className='text-white flex flex-col font-bold md:text-xl'>
                             <Link to='/'>
                                 <li className={`hover:bg-slate-700 w-full p-2 md:p-4 px-4 ${location.pathname === '/' ? 'bg-slate-500' : 'hover:bg-slate-700'}`}>Home</li>
@@ -52,12 +52,21 @@ const AuthLayout = ({ children }) => {
                 )}
 
                     <nav className="hidden w-full lg:block">
-                        <ul className='text-white flex justify-end gap-x-10 font-bold'>
+                        <ul className='text-white flex font-bold justify-end gap-x-3'>
                             <Link to='/'>
-                                <li className={`w-full p-2 md:p-4 px-4 text-xl ${location.pathname === '/' ? 'text-gray' : 'hover:text-gray'}`}>Home</li>
+                                <li className={`hover:bg-slate-700 rounded-lg w-full p-3 ${location.pathname === '/' ? 'bg-slate-500' : 'hover:bg-slate-700'}`}>Home</li>
+                            </Link>
+                            <Link to='/about'>
+                                <li className={`hover:bg-slate-700 rounded-lg w-full p-3 ${location.pathname === '/about' ? 'bg-slate-500' : 'hover:bg-gray'}`}>About Us</li>
+                            </Link>
+                            <Link to='/product'>
+                                <li className={`hover:bg-slate-700 rounded-lg w-full p-3 ${location.pathname === '/product' ? 'bg-slate-500' : 'hover:bg-gray'}`}>Product List</li>
                             </Link>
                             <Link to='/menu'>
-                                <li className={`w-full p-2 md:p-4 px-4 text-xl ${location.pathname === '/menu' ? 'text-gray' : 'hover:text-gray'}`}>Menu</li>
+                                <li className={`hover:bg-slate-700 rounded-lg w-full p-3 ${location.pathname === '/menu' ? 'bg-slate-500' : 'hover:bg-gray'}`}>Newa</li>
+                            </Link>
+                            <Link to='/contact'>
+                                <li className={`hover:bg-slate-700 rounded-lg w-full p-3 ${location.pathname === '/contact' ? 'bg-slate-500' : 'hover:bg-gray'}`}>Contact Us</li>
                             </Link>
                         </ul>
                     </nav>
@@ -74,50 +83,52 @@ const AuthLayout = ({ children }) => {
                 </div>
             </main>
 
-            <footer className="bg-[#384B70] text-white p-3 flex flex-col gap-y-5">
-                <div>
-                    <img src="/images/logotext.png" alt="CodeExpress" className="w-52 -mt-20 -ms-10" />
-                    <p className="-mt-20">Mari wujudkan impian kalian bersama CodeExpress</p>
-                </div>
-
-                <hr />
-
-                <div className="flex flex-col gap-y-3">
-                    <div className="flex flex-col gap-y-1">
-                        <h1 className="text-xl font-semibold">Menu Kami</h1>
-                        <hr className="w-20 rounded-xl border-red border-y-2" />
+            <footer className="bg-[#384B70] text-white p-3 md:p-5 flex flex-col gap-y-5 w-full">
+                <section className='flex flex-col md:flex-row gap-y-5 md:gap-x-10 lg:justify-between lg:w-3/5 lg:self-center'>
+                    <div>
+                        <img src="/images/logotext.png" alt="CodeExpress" className="w-52 -mt-20 -ms-10" />
+                        <p className="-mt-20">Mari wujudkan impian kalian bersama CodeExpress</p>
                     </div>
-                    <ul className="flex flex-col gap-y-2">
-                        <li className="hover:text-red">Home</li>
-                        <li className="hover:text-red">About Us</li>
-                        <li className="hover:text-red">Product List</li>
-                        <li className="hover:text-red">Contact Us</li>
-                    </ul>
-                </div>
 
-                <hr />
+                    <hr className='md:hidden' />
 
-                <div className="flex flex-col gap-y-3">
-                    <div className="flex flex-col gap-y-1">
-                        <h1 className="text-xl font-semibold">Hubungi Kami</h1>
-                        <hr className="w-20 rounded-xl border-red border-y-2" />
+                    <div className="flex flex-col gap-y-3">
+                        <div className="flex flex-col gap-y-1">
+                            <h1 className="text-xl font-semibold">Menu Kami</h1>
+                            <hr className="w-20 rounded-xl border-red border-y-2" />
+                        </div>
+                        <ul className="flex flex-col gap-y-2">
+                            <li className="hover:text-red">Home</li>
+                            <li className="hover:text-red">About Us</li>
+                            <li className="hover:text-red">Product List</li>
+                            <li className="hover:text-red">Contact Us</li>
+                        </ul>
                     </div>
-                    <ul className="flex flex-col gap-y-3">
-                        <li className="flex gap-x-3 items-center">
-                        <img src="/images/email.png" alt="Email" className="w-6" />
-                        <p>codeexpress@gmai.com</p>
-                        </li>
-                        <li className="flex gap-x-3 items-center">
-                        <i className="fab fa-whatsapp text-2xl text-green-600 hover:text-red"></i>
-                        <p>+62 858 66244363</p>
-                        </li>
-                    </ul>
-                </div>
+
+                    <hr className='md:hidden' />
+
+                    <div className="flex flex-col gap-y-3">
+                        <div className="flex flex-col gap-y-1">
+                            <h1 className="text-xl font-semibold">Hubungi Kami</h1>
+                            <hr className="w-20 rounded-xl border-red border-y-2" />
+                        </div>
+                        <ul className="flex flex-col gap-y-3">
+                            <li className="flex gap-x-3 items-center">
+                            <img src="/images/email.png" alt="Email" className="w-6" />
+                            <p>codeexpress@gmai.com</p>
+                            </li>
+                            <li className="flex gap-x-3 items-center">
+                            <i className="fab fa-whatsapp text-2xl text-green-600 hover:text-red"></i>
+                            <p>+62 858 66244363</p>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
 
                 <hr />
 
                 <div className="text-center flex justify-center items-start">
-                    <p className="text-sm">© Copyright 2024. All Rights Reserved by CodeExpress</p>
+                    <p className="text-sm md:text-lg md:-mt-3 lg:mt-1">© Copyright 2024. All Rights Reserved by CodeExpress</p>
                 </div>
             </footer>
         </div>
