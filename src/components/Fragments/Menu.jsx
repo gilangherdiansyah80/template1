@@ -1,55 +1,71 @@
-/* eslint-disable react/prop-types */
-import dataMenu from "../../utils/dataMenu"
-import Button from "../Elements/Button"
-import { useState, useEffect } from "react"
+import { Fragment, useState } from "react";
+import Product from "../../utils/product";
 
-const Menu = () => {
-    const [card, setCard] = useState([]);
-    const [showAll, setShowAll] = useState(false);
+const ProductMenu = () => {
+    const [isOpen, setIsOpen] = useState([]);
 
-    useEffect(() => {
-        if (Array.isArray(dataMenu)) {
-            setCard(dataMenu);
+    const handleIsOpen = (id) => {
+        if (isOpen.includes(id))  {
+            setIsOpen(isOpen.filter((item) => item !== id));
+        } else {
+            setIsOpen([...isOpen, id]);
         }
-    }, []);
+    }
 
-    const handleCard = () => {
-        setShowAll(!showAll);
-    };
-
-    const displayedCards = showAll ? card : card.slice(0, 6);
+    const heroStyle = {
+        backgroundImage: `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/images/product.jpg')`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)',
+      };
+    
 
     return (
-        <section className="p-3 mt-10 md:p-10 xl:w-3/4 xl:self-center">
-            <div className="flex justify-center items-center gap-x-3 mb-10">
-                <div className="w-0.5 h-20 bg-white md:h-24"></div>
-                <h1 data-aos='fade-down' data-aos-duration="1000" className="text-white text-center text-3xl font-bold md:text-5xl">Menu <span className="block text-base font-semibold md:text-xl">Beberapa menu bisa anda nikmati di Dapoer Ghaitsa Catering</span></h1>
-            </div>
-            <div className="xl:grid xl:grid-cols-3 xl:gap-5">
-                {displayedCards.length > 0 ? (
-                    displayedCards.map((menu) => (
-                        <div key={menu.id} data-aos='flip-left' data-aos-duration="1000" className="flex flex-col justify-center shadow-lg rounded-lg p-5 border-solid border-2 border-gray-700 gap-y-2 items-center mt-5 hover:scale-105 xl:justify-between">
-                            <div className="w-full flex flex-col items-center gap-y-3">
-                                <img src={menu.image} alt={menu.name} className='h-52 w-96 rounded-md object-cover md:w-full md:h-60 md:object-cover cursor-pointer xl:w-full xl:h-60' />
-                                <h2 className="text-white md:text-xl">{menu.price.toLocaleString("id-ID", { style: "currency", currency: "IDR" })}</h2>
-                        </div>
-                        <p className="text-white font-bold text-xl text-center justify-self-center">{menu.name}</p>
-                    </div>
-                    ))
-                ) : (
-                    <p>No certificates available</p>
-                )}
-            </div>
-            <div className="mt-5 text-center md:mt-10" data-aos='zoom-out' data-aos-duration="1000">
-                <Button className="md:text-2xl" onClick={handleCard}>
-                    {showAll ? 'Show Less' : 'See More'}
-                </Button>
-            </div>
-            
+        <Fragment>
+            <section id='about' className='flex flex-col p-3 gap-y-5 justify-center text-white mt-24 md:mt-20 h-[50vh] md:h-[30vh] lg:h-[50vh]' style={heroStyle}>
+                <h1 data-aos="fade-left" data-aos-duration="1000" className="text-2xl font-bold font-briem md:text-4xl text-center lg:w-3/5 lg:text-5xl lg:self-center">Product List</h1>
+                <p data-aos='fade-right' data-aos-duration="1000" className='md:text-xl text-center lg:w-1/3 lg:self-center'>Kami dengan senang hati akan menyajikan steak terbaik untuk Anda dan menciptakan pengalaman makan yang tak terlupakan! Terima kasih telah memilih SteakHouse Delight.</p>
+            </section>
 
-            <div id='contact'></div>
-        </section>
+            <article className="p-3 flex flex-col gap-y-3 mt-7 lg:w-3/5 lg:self-center">
+                <h2 className="text-xl font-bold md:text-2xl">Menu List - SteakHouse Delight</h2>
+                <hr className="border-red w-72 md:w-[46%] lg:w-80 border-2 rounded-xl" />
+            </article>
+
+            <section className='p-3 flex flex-col gap-y-5 mb-7 lg:w-3/5 lg:self-center'>
+                {Product.map((product) => (
+                    <div className="flex flex-col gap-y-3" key={product.id}>
+                        <article className="flex justify-between items-center" onClick={() => handleIsOpen(product.id)}>
+                            <h3 className="text-lg font-semibold md:text-xl">{product.menu}</h3>
+                            {isOpen.includes(product.id) ? (
+                                <i className="fas fa-chevron-down"></i>
+                            ) : (
+                                <i className="fas fa-chevron-up"></i>
+                            )}
+                        </article>
+                        <div className="md:grid md:grid-cols-2 gap-3 lg:grid lg:grid-cols-3">
+                            {isOpen.includes(product.id) && (
+                                product.list.map((item) => (
+                                    <div className="bg-gray1 p-3 rounded-lg text-white flex flex-col gap-y-3" key={item.id}>
+                                        <img src={item.image} alt="Garlic Bread" className="w-full h-96 md:h-72 rounded-lg" />
+                                        <article className="flex flex-col gap-y-3">
+                                            <div className="flex justify-between gap-y-3">
+                                                <h4 className="text-red font-semibold md:text-xl">{item.name}</h4>
+                                                <p className="md:text-xl">Rp. {item.price.toLocaleString('id-ID', {styles: 'currency', currrency: 'IDR'})}</p>
+                                            </div>
+                                            <p className="md:text-xl">{item.desc}</p>
+                                        </article>
+                                    </div>
+                                ))
+                            )}
+                        </div>
+
+                        <hr className="border-red border-2" />
+                    </div>
+                ))}
+            </section>
+        </Fragment>
     )
 }
 
-export default Menu
+export default ProductMenu;

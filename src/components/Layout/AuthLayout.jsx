@@ -41,9 +41,6 @@ const AuthLayout = ({ children }) => {
                             <Link to='/product'>
                                 <li className={`hover:bg-slate-700 w-full p-2 md:p-4 px-4 ${location.pathname === '/product' ? 'bg-slate-500' : 'hover:bg-gray'}`}>Product List</li>
                             </Link>
-                            <Link to='/menu'>
-                                <li className={`hover:bg-slate-700 w-full p-2 md:p-4 px-4 ${location.pathname === '/menu' ? 'bg-slate-500' : 'hover:bg-gray'}`}>Newa</li>
-                            </Link>
                             <Link to='/contact'>
                                 <li className={`hover:bg-slate-700 w-full p-2 md:p-4 px-4 ${location.pathname === '/contact' ? 'bg-slate-500' : 'hover:bg-gray'}`}>Contact Us</li>
                             </Link>
@@ -61,9 +58,6 @@ const AuthLayout = ({ children }) => {
                             </Link>
                             <Link to='/product'>
                                 <li className={`hover:bg-slate-700 rounded-lg w-full p-3 ${location.pathname === '/product' ? 'bg-slate-500' : 'hover:bg-gray'}`}>Product List</li>
-                            </Link>
-                            <Link to='/menu'>
-                                <li className={`hover:bg-slate-700 rounded-lg w-full p-3 ${location.pathname === '/menu' ? 'bg-slate-500' : 'hover:bg-gray'}`}>Newa</li>
                             </Link>
                             <Link to='/contact'>
                                 <li className={`hover:bg-slate-700 rounded-lg w-full p-3 ${location.pathname === '/contact' ? 'bg-slate-500' : 'hover:bg-gray'}`}>Contact Us</li>

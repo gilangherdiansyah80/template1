@@ -1,23 +1,63 @@
+import { Fragment } from "react";
+
 /* eslint-disable react/prop-types */
 const AboutUs = () => {
+    const heroStyle = {
+      backgroundImage: `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/images/about1.jpg')`,
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+      textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)',
+    };
+  
     return (
-       <section className="p-3 mt-10 md:p-10 xl:w-3/4 xl:self-center">
-            <div className="flex justify-center gap-x-3 items-center mb-5">
-                <div className="bg-white h-20 w-0.5 rounded-md md:h-24"></div>
-                <h1 data-aos='flip-up' data-aos-duration="1000" className="text-3xl font-bold text-white text-center md:text-5xl">Tentang Kami <span className="block text-base font-semibold md:text-xl mt-2">Dapoer Ghaitsa Catering</span></h1>
-            </div>
-            <div data-aos='zoom-in' data-aos-duration="1000" className="text-center text-white p-3 flex flex-col gap-y-5 md:text-lg">
-                <p>
-                    Selamat datang di Dapoer Ghaitsa Catering, tempat di mana kami mempersembahkan kelezatan dan keanekaragaman rasa dari seluruh Nusantara. Sebagai penyedia layanan catering makanan nusantara, kami bangga akan warisan kuliner Indonesia yang kaya dan beragam.
-                    Kami percaya bahwa makanan tidak hanya tentang mengisi perut, tetapi juga tentang merayakan budaya dan tradisi. Dengan setiap hidangan yang kami sajikan, kami berusaha untuk menghadirkan pengalaman kuliner yang menggugah selera dan merayakan keindahan masakan Indonesia.
-                    Di Dapoer Ghaitsa Catering, kami mengutamakan kualitas dan keaslian bahan baku. Setiap hidangan disiapkan dengan teliti oleh koki berpengalaman yang tidak hanya mahir dalam seni memasak, tetapi juga memiliki dedikasi untuk mempertahankan cita rasa autentik setiap hidangan.
-                    Kami menyediakan layanan catering untuk berbagai acara, mulai dari pesta pernikahan, acara korporat, hingga pertemuan keluarga. Dengan beragam menu yang disesuaikan dengan kebutuhan dan preferensi Anda, kami berkomitmen untuk menyajikan pengalaman kuliner yang tak terlupakan bagi setiap tamu Anda.
-                </p>
-            </div>
-
-            <div id='menu'></div>
-       </section> 
-    )
-}
-
-export default AboutUs;
+        <Fragment>
+          <section id='about' className='flex flex-col p-3 gap-y-5 justify-center text-white mt-24 md:mt-20 h-[50vh] md:h-[30vh] lg:h-[50vh]' style={heroStyle}>
+              <h1 data-aos="fade-left" data-aos-duration="1000" className="text-2xl font-bold font-briem md:text-4xl lg:text-5xl text-center lg:w-3/5 lg:self-center">About Us</h1>
+              <p data-aos='fade-right' data-aos-duration="1000" className='md:text-xl text-center lg:w-1/3 lg:self-center'>Meskipun industri kuliner terus berkembang, kami di SteakHouse Delight selalu berpegang teguh pada prinsip kualitas dan keunggulan. Kami percaya bahwa sajian steak terbaik berasal dari daging berkualitas yang diproses dengan teknik masak sempurna.</p>
+          </section>
+  
+          <section className="p-5 flex flex-col md:flex-row lg:flex-col w-full md:gap-x-10 lg:w-3/5 lg:h-fit lg:self-center"> 
+              <section className="flex flex-col gap-y-5 mt-7 md:w-1/2 lg:flex-row lg:gap-x-5 lg:w-full">
+                  <img src="/images/about4.jpg" alt="SteakHouse Delight" className="lg:w-full lg:h-96" />
+                  <img src="/images/about3.jpg" alt="SteakHouse Delight" className="lg:w-full lg:h-96" />
+              </section>
+  
+              <section className='flex flex-col gap-y-5 mt-7 md:w-1/2 lg:w-full'>
+                  <article className='flex flex-col justify-center gap-y-2'>
+                      <h1 className='font-bold text-xl'>About Us</h1>
+                      <hr className='border-red w-24 border-2 rounded-xl' />
+                  </article>
+  
+                  <article>
+                      <h2 className='w-92 text-2xl font-semibold md:text-4xl'>Our Story</h2>
+                  </article>
+  
+                  <article>
+                      <p className="md:text-xl">Demi menjaga standar tinggi dalam setiap sajian, kami bekerja sama dengan peternakan yang menerapkan praktik peternakan berkelanjutan. Kami memastikan bahwa setiap steak yang sampai ke meja Anda tidak hanya lezat, tetapi juga diproduksi secara etis dan bertanggung jawab terhadap lingkungan.</p>
+                  </article>
+  
+                  <article>
+                      <p className="md:text-xl">Melalui rantai pasokan yang transparan dan terjamin, kami berkomitmen untuk menjaga kualitas daging terbaik dan metode memasak yang presisi, sehingga setiap steak yang disajikan tetap segar, juicy, dan penuh rasa.</p>
+                  </article>
+  
+                  <div className="flex flex-col gap-y-3 w-full lg:flex-row lg:gap-x-5">
+                      <img src="/images/founder.jpg" alt="Founder" className="rounded-lg" />
+                      <div className="flex flex-col gap-y-3">
+                          <article className="flex flex-col gap-y-1">
+                              <h3 className="font-bold text-xl md:text-2xl">Aditya Sofyan</h3>
+                              <hr className="border-red w-32 md:w-40 border-2 rounded-xl" />
+                              <h4 className="text-xl">Ceo of SteakHouse Delight</h4>
+                          </article>
+  
+                          <article>
+                              <p className="md:text-xl">Menciptakan rantai pasokan yang transparan dan terjamin untuk memastikan bahwa setiap steak yang kami sajikan tidak hanya enak, tetapi juga diproduksi secara bertanggung jawab</p>
+                          </article>
+                      </div>
+                  </div>
+              </section>
+          </section>
+        </Fragment>
+    );
+  };
+  
+  export default AboutUs;
