@@ -88,50 +88,17 @@ const HomeSection = () => {
                 </article>
               </section>
 
-              <section className='flex flex-col gap-y-5 w-full md:flex-row md:gap-x-5 lg:w-3/5 lg:self-center'>
+              <section className="flex flex-col md:flex-row gap-5 w-full lg:w-3/5 lg:self-center">
                 <div className='bg-[#ECDFCC] rounded-md text-black p-3 text-center flex flex-col gap-y-3 md:w-1/2 md:h-[555px]'>
                   <img src="/images/testimoni1.jpg" alt="Testimoni" className='w-full md:h-64' />
                   <h3 className='text-red font-semibold md:text-xl'>David M.</h3>
                   <p className='md:text-xl'>&quot;Sebagai koki di sebuah restoran terkenal, saya harus memastikan setiap steak yang disajikan memenuhi standar tertinggi. SteakHouse Delight tidak pernah mengecewakan. Kualitas daging dan metode memasaknya benar-benar sempurna.&quot;</p>
                 </div>
 
-                <div className='bg-[#ECDFCC] rounded-md text-black p-3 text-center flex flex-col gap-y-3 mb-5 md:w-1/2'>
+                <div className='bg-[#ECDFCC] rounded-md text-black p-3 text-center flex flex-col gap-y-3 mb-5 md:w-1/2 md:h-[555px]'>
                   <img src="/images/testimoni2.jpg" alt="Testimoni" className='w-full md:h-64' />
                   <h3 className='text-red font-semibold md:text-xl'>Lisa P.</h3>
                   <p className='md:text-xl'>&quot;Sebagai CEO dari Gourmet Bites, produsen makanan berkualitas, bekerja sama dengan SteakHouse Delight menunjukkan komitmen kami terhadap kualitas dan kelezatan. Kami senang bekerja dengan pemasok steak yang bertanggung jawab dan selalu memberikan produk terbaik.&quot;</p>
-                </div>
-              </section>
-            </section>
-
-            <section className='p-3 flex flex-col gap-y-5 mt-7 mb-7 lg:w-3/5 lg:self-center'>
-              <article className='flex flex-col justify-center items-center gap-y-2'>
-                <h1 className='font-bold text-xl md:text-2xl'>News Update</h1>
-                <hr className='border-red w-32 border-2 rounded-xl' />
-              </article>
-
-              <article>
-                <p className='text-center md:text-xl'>Kolaborasi kami dengan pemasok daging sapi berkualitas tinggi memperkuat komitmen kami terhadap keberlanjutan dan keunggulan dalam setiap hidangan. Transparansi dalam rantai pasokan kami memberikan kepercayaan bahwa steak yang kami sajikan tidak hanya lezat, tetapi juga diproduksi secara etis.</p>
-              </article>
-
-              <section className='flex flex-col gap-y-5 md:grid md:grid-cols-2 md:gap-3 lg:grid-cols-4'>
-                <div className='bg-[#ECDFCC] rounded-md text-black flex flex-col gap-y-3 drop-shadow-lg'>
-                  <img src="/images/news1.jpg" alt="News Update" className='w-full h-52 rounded-t-md' />
-                  <h3 className='text-red font-semibold p-3 md:text-xl'>From Farm to Table: The Journey of Our Premium Steaks</h3>
-                </div>
-
-                <div className='bg-[#ECDFCC] rounded-md text-black flex flex-col gap-y-3 drop-shadow-lg'>
-                  <img src="/images/nes2.jpg" alt="News Update" className='w-full h-52 rounded-t-md' />
-                  <h3 className='text-red font-semibold p-3 md:text-xl'>The Art of Cooking the Perfect Steak</h3>
-                </div>
-
-                <div className='bg-[#ECDFCC] rounded-md text-black flex flex-col gap-y-3 drop-shadow-lg'>
-                  <img src="/images/news3.jpg" alt="News Update" className='w-full h-52 rounded-t-md' />
-                  <h3 className='text-red font-semibold p-3 md:text-xl'>Steak in Your Kitchen: How to Choose and Cook It Like a Pro</h3>
-                </div>
-
-                <div className='bg-[#ECDFCC] rounded-md text-black flex flex-col gap-y-3 drop-shadow-lg'>
-                  <img src="/images/news4.jpg" alt="News Update" className='w-full h-52 rounded-t-md' />
-                  <h3 className='text-red font-semibold p-3 md:text-xl'>Sustainable Sourcing: Ensuring the Best Steak for You and the Planet</h3>
                 </div>
               </section>
             </section>
