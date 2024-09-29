@@ -17,7 +17,7 @@ const AuthLayout = ({ children }) => {
 
     return (
         <div className='w-full'>
-            <header className="bg-[#384B70] top-0 left-0 w-full lg:flex lg:justify-center font-inter fixed z-10 h-24 md:h-20" data-aos="fade-down">
+            <header className="bg-[#384B70] top-0 left-0 w-full lg:flex lg:justify-center font-inter fixed z-30 h-24 md:h-20" data-aos="fade-down">
                 <div className="w-full lg:w-3/5 h-full flex justify-center lg:justify-between items-center">
                 <div className='w-full flex justify-between lg:justify-start items-center'>
                     <img src="/images/logo.png" alt="CodeExpress" className="w-44 -ms-5" />
@@ -67,7 +67,7 @@ const AuthLayout = ({ children }) => {
                 </div>
             </header>
 
-            <main className='bg-[#ECDFCC] flex flex-col overflow-x-hidden'>
+            <main className='bg-[#ECDFCC] flex flex-col overflow-x-hidden overflow-y-hidden'>
                 {children}
 
                 <div className='fixed bottom-5 right-5 bg-green-500 rounded-full w-10 h-10 flex justify-center items-center md:w-16 md:h-16'>

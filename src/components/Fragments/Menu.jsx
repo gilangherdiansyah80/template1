@@ -23,8 +23,8 @@ const ProductMenu = () => {
     return (
         <Fragment>
             <section id='about' className='flex flex-col p-3 gap-y-5 justify-center text-white mt-24 md:mt-20 h-[50vh] md:h-[30vh] lg:h-[50vh]' style={heroStyle}>
-                <h1 data-aos="fade-left" data-aos-duration="1000" className="text-2xl font-bold font-briem md:text-4xl text-center lg:w-3/5 lg:text-5xl lg:self-center">Product List</h1>
-                <p data-aos='fade-right' data-aos-duration="1000" className='md:text-xl text-center lg:w-1/3 lg:self-center'>Kami dengan senang hati akan menyajikan steak terbaik untuk Anda dan menciptakan pengalaman makan yang tak terlupakan! Terima kasih telah memilih SteakHouse Delight.</p>
+                <h1 data-aos="fade-down" data-aos-duration="1000" data-aos-delay="50" className="text-2xl font-bold font-briem md:text-4xl text-center lg:w-3/5 lg:text-5xl lg:self-center">Product List</h1>
+                <p data-aos='fade-down' data-aos-duration="1000" data-aos-delay="60" className='md:text-xl text-center lg:w-1/3 lg:self-center'>Kami dengan senang hati akan menyajikan steak terbaik untuk Anda dan menciptakan pengalaman makan yang tak terlupakan! Terima kasih telah memilih SteakHouse Delight.</p>
             </section>
 
             <article className="p-3 flex flex-col gap-y-3 mt-7 lg:w-3/5 lg:self-center">
