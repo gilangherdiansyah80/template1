@@ -30,7 +30,7 @@ const AuthLayout = ({ children }) => {
                     </div>
                 </div>
                 {open && (
-                    <nav className="bg-[#507687] w-full mt-80 md:mt-96 absolute lg:hidden">
+                    <nav className="bg-[#507687] w-full mt-72 md:mt-96 absolute lg:hidden">
                         <ul className='text-white flex flex-col font-bold md:text-xl'>
                             <Link to='/'>
                                 <li className={`hover:bg-slate-700 w-full p-2 md:p-4 px-4 ${location.pathname === '/' ? 'bg-slate-500' : 'hover:bg-slate-700'}`}>Home</li>
@@ -49,18 +49,18 @@ const AuthLayout = ({ children }) => {
                 )}
 
                     <nav className="hidden w-full lg:block">
-                        <ul className='text-white flex font-bold justify-end gap-x-3'>
-                            <Link to='/'>
-                                <li className={`hover:bg-slate-700 rounded-lg w-full p-3 ${location.pathname === '/' ? 'bg-slate-500' : 'hover:bg-slate-700'}`}>Home</li>
+                        <ul className='text-white flex font-bold justify-center items-center gap-x-3'>
+                            <Link to='/' className='flex justify-center items-center w-32'>
+                                <li className={`hover:bg-slate-700 rounded-lg p-3 ${location.pathname === '/' ? 'bg-slate-500 p-3' : 'hover:bg-slate-700'}`}>Home</li>
                             </Link>
-                            <Link to='/about'>
-                                <li className={`hover:bg-slate-700 rounded-lg w-full p-3 ${location.pathname === '/about' ? 'bg-slate-500' : 'hover:bg-gray'}`}>About Us</li>
+                            <Link to='/about' className='flex justify-center items-center w-32'>
+                                <li className={`hover:bg-slate-700 rounded-lg p-3 ${location.pathname === '/about' ? 'bg-slate-500 p-3' : 'hover:bg-gray'}`}>About Us</li>
                             </Link>
-                            <Link to='/product'>
-                                <li className={`hover:bg-slate-700 rounded-lg w-full p-3 ${location.pathname === '/product' ? 'bg-slate-500' : 'hover:bg-gray'}`}>Product List</li>
+                            <Link to='/product' className='flex justify-center items-center w-32'>
+                                <li className={`hover:bg-slate-700 rounded-lg p-3 ${location.pathname === '/product' ? 'bg-slate-500' : 'hover:bg-gray'}`}>Product List</li>
                             </Link>
-                            <Link to='/contact'>
-                                <li className={`hover:bg-slate-700 rounded-lg w-full p-3 ${location.pathname === '/contact' ? 'bg-slate-500' : 'hover:bg-gray'}`}>Contact Us</li>
+                            <Link to='/contact' className='flex justify-center items-center w-32'>
+                                <li className={`hover:bg-slate-700 rounded-lg p-3 ${location.pathname === '/contact' ? 'bg-slate-500' : 'hover:bg-gray'}`}>Contact Us</li>
                             </Link>
                         </ul>
                     </nav>
