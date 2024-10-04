@@ -3,7 +3,7 @@ import { Fragment } from 'react'
 const HomeSection = () => {
   return (
       <Fragment>
-            <section className='p-5 flex flex-col lg:flex-row lg:gap-x-8 gap-y-8 mt-7 lg:w-3/5 lg:self-center'>
+            <section className='p-5 flex flex-col lg:flex-row lg:gap-x-8 gap-y-8 mt-7 xl:w-3/5 xl:self-center'>
               <div className='bg-[#ECDFCC] shadow-[3px_3px_10px_2px_black,-3px_-3px_0px_0px_red] p-5 flex flex-col gap-y-5' data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="50">
                 <i className='fas fa-utensils text-5xl text-red'></i>
                 <h1 className='font-bold text-xl md:text-2xl'>Food Product</h1>
@@ -23,7 +23,7 @@ const HomeSection = () => {
               </div>
             </section>
 
-            <section className='flex flex-col md:flex-row w-full items-center md:h-fit gap-y-3 lg:self-center lg:w-3/5'>
+            <section className='flex flex-col md:flex-row w-full items-center md:h-fit gap-y-3 xl:self-center xl:w-3/5'>
               <section className="p-3 flex flex-col gap-y-8 mt-7 md:w-1/2">
                 <div className='bg-red absolute mt-28 text-white -ms-2 p-5 w-52 md:w-64 flex flex-col gap-y-3 z-20' data-aos="fade-right" data-aos-duration="1000" data-aos-delay="80">
                   <div className='flex items-center gap-x-3'>
@@ -43,7 +43,7 @@ const HomeSection = () => {
                 </div>
                 
                 <div className='w-11/12 self-end' data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="90">
-                  <img src="./images/steak.jpg" alt="Steak" className='w-full h-80 md:h-full' />
+                  <img src="./images/steak.jpg" alt="Steak" className='w-full md:h-full' />
                 </div>
               </section>
 
@@ -73,7 +73,7 @@ const HomeSection = () => {
             </section>
 
             <section className='bg-gray1 p-3 flex flex-col w-full gap-y-5 text-white mt-7'>
-              <section className='flex flex-col gap-y-5 lg:w-3/5 lg:self-center'>
+              <section className='flex flex-col gap-y-5 xl:w-3/5 xl:self-center'>
                 <article className='flex flex-col justify-center gap-y-2'>
                   <h1 className='font-bold text-xl md:text-2xl' data-aos="fade-down" data-aos-duration="1000" data-aos-delay="160">Testimoni</h1>
                   <hr className='border-red w-24 border-2 rounded-xl md:w-28' data-aos="fade-down" data-aos-duration="1000" data-aos-delay="170" />
@@ -88,7 +88,7 @@ const HomeSection = () => {
                 </article>
               </section>
 
-              <section className="flex flex-col md:flex-row gap-5 w-full lg:w-3/5 lg:self-center">
+              <section className="flex flex-col md:flex-row gap-5 w-full xl:w-3/5 xl:self-center">
                 <div className='bg-[#ECDFCC] rounded-md text-black p-3 text-center flex flex-col gap-y-3 md:w-1/2 md:h-[555px]' data-aos="flip-left" data-aos-duration="1000" data-aos-delay="200">
                   <img src="/images/testimoni1.jpg" alt="Testimoni" className='w-full md:h-64' data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="210" />
                   <h3 className='text-red font-semibold md:text-xl' data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="220">David M.</h3>

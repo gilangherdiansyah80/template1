@@ -18,7 +18,7 @@ const AuthLayout = ({ children }) => {
     return (
         <div className='w-full'>
             <header className="bg-[#384B70] top-0 left-0 w-full lg:flex lg:justify-center font-inter fixed z-30 h-24 md:h-20" data-aos="fade-down">
-                <div className="w-full lg:w-3/5 h-full flex justify-center lg:justify-between items-center">
+                <div className="w-full xl:w-3/5 h-full flex justify-center lg:justify-between items-center">
                 <div className='w-full flex justify-between lg:justify-start items-center'>
                     <img src="/images/logo.png" alt="CodeExpress" className="w-44 -ms-5" />
                     <div className='mr-3 lg:hidden'>
@@ -49,12 +49,12 @@ const AuthLayout = ({ children }) => {
                 )}
 
                     <nav className="hidden w-full lg:block">
-                        <ul className='text-white flex font-bold justify-center items-center gap-x-3'>
+                        <ul className='text-white flex font-bold justify-center items-center gap-x-1'>
                             <Link to='/' className='flex justify-center items-center w-32'>
-                                <li className={`hover:bg-slate-700 rounded-lg p-3 ${location.pathname === '/' ? 'bg-slate-500 p-3' : 'hover:bg-slate-700'}`}>Home</li>
+                                <li className={`hover:bg-slate-700 rounded-lg p-3 ${location.pathname === '/' ? 'bg-slate-500' : 'hover:bg-slate-700'}`}>Home</li>
                             </Link>
                             <Link to='/about' className='flex justify-center items-center w-32'>
-                                <li className={`hover:bg-slate-700 rounded-lg p-3 ${location.pathname === '/about' ? 'bg-slate-500 p-3' : 'hover:bg-gray'}`}>About Us</li>
+                                <li className={`hover:bg-slate-700 rounded-lg p-3 ${location.pathname === '/about' ? 'bg-slate-500' : 'hover:bg-gray'}`}>About Us</li>
                             </Link>
                             <Link to='/product' className='flex justify-center items-center w-32'>
                                 <li className={`hover:bg-slate-700 rounded-lg p-3 ${location.pathname === '/product' ? 'bg-slate-500' : 'hover:bg-gray'}`}>Product List</li>
@@ -70,7 +70,7 @@ const AuthLayout = ({ children }) => {
             <main className='bg-[#ECDFCC] flex flex-col overflow-x-hidden overflow-y-hidden'>
                 {children}
 
-                <div className='fixed bottom-5 right-5 bg-green-500 rounded-full w-10 h-10 flex justify-center items-center md:w-16 md:h-16'>
+                <div className='fixed bottom-5 right-5 bg-green-500 rounded-full w-10 h-10 flex justify-center items-center'>
                     <a href="https://wa.me/+6281222535507">
                         <Icon style="fab fa-whatsapp text-white text-2xl" />
                     </a>
@@ -78,7 +78,7 @@ const AuthLayout = ({ children }) => {
             </main>
 
             <footer className="bg-[#384B70] text-white p-3 md:p-5 flex flex-col gap-y-5 w-full">
-                <section className='flex flex-col md:flex-row gap-y-5 md:gap-x-10 lg:justify-between lg:w-3/5 lg:self-center'>
+                <section className='flex flex-col md:flex-row gap-y-5 md:gap-x-10 lg:justify-between xl:w-3/5 xl:self-center'>
                     <div>
                         <img src="/images/logotext.png" alt="CodeExpress" className="w-52 -mt-20 -ms-10" />
                         <p className="-mt-20">Mari wujudkan impian kalian bersama CodeExpress</p>

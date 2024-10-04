@@ -13,10 +13,10 @@ const ContactUs = () => {
         <Fragment>
           <section id='about' className='flex flex-col p-3 gap-y-5 justify-center text-white mt-24 md:mt-20 h-[50vh] md:h-[30vh] lg:h-[50vh]' style={heroStyle}>
               <h1 data-aos="fade-down" data-aos-duration="1000" data-aos-delay="50" className="text-2xl font-bold font-briem md:text-4xl lg:text-5xl text-center">Contact Us</h1>
-              <p data-aos='fade-down' data-aos-duration="1000" data-aos-delay="60" className='md:text-xl text-center lg:w-1/3 lg:self-center'>Meskipun industri kuliner terus berkembang, kami di SteakHouse Delight selalu berpegang teguh pada prinsip kualitas dan keunggulan. Kami percaya bahwa sajian steak terbaik berasal dari daging berkualitas yang diproses dengan teknik masak sempurna.</p>
+              <p data-aos='fade-down' data-aos-duration="1000" data-aos-delay="60" className='md:text-xl text-center xl:w-1/3 xl:self-center'>Meskipun industri kuliner terus berkembang, kami di SteakHouse Delight selalu berpegang teguh pada prinsip kualitas dan keunggulan. Kami percaya bahwa sajian steak terbaik berasal dari daging berkualitas yang diproses dengan teknik masak sempurna.</p>
           </section>
   
-          <section className='p-5 flex flex-col gap-y-5 mt-7 lg:w-3/5 lg:self-center'>
+          <section className='p-5 flex flex-col gap-y-5 mt-7 xl:w-3/5 xl:self-center'>
               <article className='flex flex-col justify-center gap-y-2'>
                   <h1 className='font-bold text-xl md:text-2xl' data-aos='fade-down' data-aos-duration="1000" data-aos-delay="70">Pemesanan</h1>
                   <hr className='border-red w-24 md:w-32 border-2 rounded-xl' data-aos='fade-down' data-aos-duration="1000" data-aos-delay="80" />

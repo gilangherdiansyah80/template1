@@ -28,7 +28,7 @@ const Hero = () => {
   return (
     <Fragment>
       <section id='home' className='flex flex-col p-3 gap-y-3 justify-center text-white mt-24 md:mt-20 h-[83vh] md:h-[40vh] lg:h-[75vh]' style={heroStyle}>
-        <div className='flex flex-col p-3 gap-y-5 justify-center lg:w-3/5 lg:self-center'>
+        <div className='flex flex-col p-3 gap-y-5 justify-center xl:w-3/5 xl:self-center'>
           <article className='flex flex-col gap-y-2'>
             <h1 data-aos="fade-left" data-aos-duration="1000" className="text-2xl font-bold font-briem">SteakHouse Delightk</h1>
             <hr className='w-52 lg:w-60 border-red border-2 rounded-lg' />
