@@ -25,8 +25,8 @@ const AuthLayout = ({ children }) => {
           <div className="w-full flex justify-between lg:justify-start items-center">
             <img
               src="/images/logo.png"
-              alt="ADExpress"
-              className="w-44 -ms-5"
+              alt="code.express"
+              className="w-32 -ms-2"
             />
             <div className="mr-3 lg:hidden">
               {open ? (
@@ -168,11 +168,11 @@ const AuthLayout = ({ children }) => {
           <div className="flex flex-col">
             <img
               src="/images/logo.png"
-              alt="ADExpress"
-              className="w-52 -mt-20 -ms-10"
+              alt="code.express"
+              className="w-52 -mt-14 -ms-12"
             />
-            <p className="-mt-16">
-              Mari wujudkan impian kalian bersama ADExpress
+            <p className="-mt-10">
+              Mari wujudkan impian kalian bersama code.express
             </p>
           </div>
 
@@ -199,13 +199,23 @@ const AuthLayout = ({ children }) => {
               <hr className="w-20 rounded-xl border-red border-y-2" />
             </div>
             <ul className="flex flex-col gap-y-3">
-              <li className="flex gap-x-3 items-center">
-                <img src="/images/email.png" alt="Email" className="w-6" />
-                <p>ADExpress@gmai.com</p>
+              <li className="cursor-pointer">
+                <a
+                  href="https://wa.me/+6281222535507"
+                  className="flex gap-x-3 items-center"
+                >
+                  <img src="/images/email.png" alt="Email" className="w-6" />
+                  <p>codeexpress2025@gmail.com</p>
+                </a>
               </li>
-              <li className="flex gap-x-3 items-center">
-                <i className="fab fa-whatsapp text-2xl text-green-600 hover:text-red"></i>
-                <p>+62 858 66244363</p>
+              <li className="cursor-pointer">
+                <a
+                  href="https://wa.me/+6281222535507"
+                  className="flex gap-x-3 items-center"
+                >
+                  <i className="fab fa-whatsapp text-2xl text-green-600"></i>
+                  <p>+6281222535507</p>
+                </a>
               </li>
             </ul>
           </div>
@@ -215,7 +225,7 @@ const AuthLayout = ({ children }) => {
 
         <div className="text-center flex justify-center items-start">
           <p className="text-sm md:text-lg md:-mt-3 lg:mt-1">
-            © Copyright 2024. All Rights Reserved by ADExpress
+            © Copyright 2024. All Rights Reserved by code.express
           </p>
         </div>
       </footer>
